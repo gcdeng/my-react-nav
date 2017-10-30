@@ -10,6 +10,16 @@ class App extends Component {
     };
   }
 
+  componentDidMount(){
+    window.onscroll = () => {
+      if(this.state.menuExpanded){
+        this.setState({
+          menuExpanded: false
+        })
+      }
+    }
+  }
+
   handleOnClick = () => {
     if(!this.state.menuExpanded){
       this.setState({
@@ -46,6 +56,7 @@ class App extends Component {
           </Grid>
         </nav>
         <div className={this.state.menuExpanded? "menu-curtain menu-curtain-expanded" : "menu-curtain"} onClick={this.handleOnClick}></div>
+        <div className="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
       </div>
     );
   }

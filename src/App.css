@@ -1,31 +1,32 @@
-nav .nav-header {
-  display: inline-block; }
-  nav .nav-header .nav-brand {
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: #fff; }
+  nav .nav-header {
+    display: inline-block; }
+    nav .nav-header .nav-brand {
+      display: inline-block;
+      padding: 15px;
+      text-decoration: none;
+      cursor: pointer; }
+    nav .nav-header .nav-toggle {
+      display: none; }
+  nav .nav-collapse {
     display: inline-block;
-    padding: 15px;
-    text-decoration: none;
-    cursor: pointer; }
-  nav .nav-header .nav-toggle {
-    display: none; }
-
-nav .nav-collapse {
-  display: inline-block;
-  float: right; }
-  nav .nav-collapse .nav-list {
-    padding-left: 0;
-    margin-bottom: 0; }
-    nav .nav-collapse .nav-list .nav-item {
-      display: inline-block; }
-      nav .nav-collapse .nav-list .nav-item a {
-        display: block;
-        text-decoration: none;
-        padding: 15px; }
+    float: right; }
+    nav .nav-collapse .nav-list {
+      padding-left: 0;
+      margin-bottom: 0; }
+      nav .nav-collapse .nav-list .nav-item {
+        display: inline-block; }
+        nav .nav-collapse .nav-list .nav-item a {
+          display: block;
+          text-decoration: none;
+          padding: 15px; }
 
 @media screen and (max-width: 767px) {
   nav {
-    position: relative;
-    z-index: 3;
-    background-color: #fff; }
+    z-index: 3; }
     nav .nav-header {
       display: flex;
       align-items: center;
@@ -82,11 +83,14 @@ nav .nav-collapse {
     top: 0;
     left: 0;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.4);
     z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
     transition: opacity 1s ease-in-out 0.1s; }
   .menu-curtain-expanded {
     right: 0;
     bottom: 0;
     opacity: 1;
     transition: opacity 1s ease-in-out 0.1s; } }
+
+.content {
+  height: 200vh; }
